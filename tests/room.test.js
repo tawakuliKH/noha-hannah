@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import * as THREE from 'three';
+import {buildRoom,sofaTones} from '../src/room.js';
+import {brand,localReply,policies} from '../src/content.js';
+test('room contains finite 3D furniture geometry within the camera frame',()=>{const {room,fabric,texture}=buildRoom('Clay');const meshes=[];room.traverse(o=>{if(o.isMesh)meshes.push(o)});assert.ok(meshes.length>45);for(const name of ['Round coffee table','Rounded armrest','Individual seat cushion','Linen lamp shade','Woven rug'])assert.ok(meshes.some(m=>m.name===name));const box=new THREE.Box3().setFromObject(room);assert.ok(box.min.toArray().every(Number.isFinite));assert.ok(box.max.toArray().every(Number.isFinite));assert.ok(box.getSize(new THREE.Vector3()).length()<9);assert.equal(fabric.color.getHexString(),new THREE.Color(sofaTones.Clay).getHexString());texture.dispose()});
+test('contact, hours and delivery facts match the owner supplied information',()=>{assert.ok(localReply('email').includes(brand.email));assert.ok(localReply('telephone').includes('07466353588'));assert.ok(localReply('Sunday opening hours').includes('10 AM–7 PM'));assert.ok(localReply('delivery').includes('order amount'));assert.ok(localReply('payment').includes('in store'))});
+test('returns answers preserve statutory rights and both topics in a compound question',()=>{const a=localReply('delivery and returns');assert.ok(a.includes(policies.delivery));assert.ok(a.includes('statutory rights'));assert.ok(a.includes('regardless of whether a warranty'));assert.ok(!a.includes('not published'))});
