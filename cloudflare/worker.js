@@ -1,30 +1,76 @@
 // Generated standalone Worker for Cloudflare Dashboard. No imports or API keys.
 // After editing source business facts, run npm run build:worker and repaste this file.
 // Confirm real products, contact details and policies here before launch.
+
 const brand = {
-  name: 'NOHA & HANNAH', domain: 'https://nohannah.co.uk',
+  name: 'NOHA & HANNAH',
+  domain: 'https://nohannah.co.uk',
   promise: 'Beautiful homes. Everyday prices.',
-  email: 'supports@nohannah.co.uk', phone: '01133183217', mobile: '07466353588', address: '221 Harehills Lane, Leeds, LS8 3QH',
-  company: 'ZWAN ENTERPRISE LIMITED', hours: 'Monday to Saturday: 10 AM–8 PM. Sunday: 10 AM–7 PM (UK local time).',
+  email: 'supports@nohannah.co.uk',
+  phone: '01133183217',
+  mobile: '07466353588',
+  address: '221A Harehills Lane, Leeds, LS8 3QH',
+  company: 'ZWAN ENTERPRISE LIMITED',
+  hours:
+    'Monday to Saturday: 10 AM–8 PM. Sunday: 10 AM–7 PM (UK local time).',
 };
+
 const collections = [
-  {id:'living',name:'Living, beautifully',label:'Living room',image:'living',note:'A little more warmth. A little more you.',text:'Explore a softer approach to your living space: layered textures, warm neutrals and thoughtful details that bring a room together.'},
-  {id:'bedroom',name:'Your softer sanctuary',label:'Bedroom',image:'bedroom',note:'Make room for slower mornings.',text:'Take inspiration from restful colours, layered bedding and natural textures for a bedroom that feels calm and personal.'},
-  {id:'details',name:'The finishing touches',label:'Everyday details',image:'details',note:'Small changes. A lovely difference.',text:'Discover the styling possibilities of considered accents, comforting textures and useful pieces that make a house feel like home.'},
+  {
+    id: 'living',
+    name: 'Living, beautifully',
+    label: 'Living room',
+    image: 'living',
+    note: 'A little more warmth. A little more you.',
+    text:
+      'Explore a softer approach to your living space: layered textures, warm neutrals and thoughtful details that bring a room together.',
+  },
+  {
+    id: 'bedroom',
+    name: 'Your softer sanctuary',
+    label: 'Bedroom',
+    image: 'bedroom',
+    note: 'Make room for slower mornings.',
+    text:
+      'Take inspiration from restful colours, layered bedding and natural textures for a bedroom that feels calm and personal.',
+  },
+  {
+    id: 'details',
+    name: 'The finishing touches',
+    label: 'Everyday details',
+    image: 'details',
+    note: 'Small changes. A lovely difference.',
+    text:
+      'Discover the styling possibilities of considered accents, comforting textures and useful pieces that make a house feel like home.',
+  },
 ];
+
 const policies = {
- delivery: 'Shop in store. Delivery can be arranged for selected items, depending on your delivery address and order amount. Contact us to confirm eligibility, charges and arrangements before purchasing.',
- returns: 'Voluntary returns are accepted where a warranty was given at the time of purchase, subject to the agreed terms. Items must be in almost-new condition; customer-damaged or broken items are not accepted under this voluntary policy. Electrical warranties apply only to specific items and must be confirmed at purchase. These conditions do not affect your statutory rights. If an item is faulty, not as described or not fit for purpose, contact us: your legal rights apply regardless of whether a warranty was provided.',
- payments: 'All types of payment are accepted in store. Contact the team if you would like to confirm a particular payment method. This website does not process payments.',
+  delivery:
+    'Shop in store. Delivery can be arranged for selected items, depending on your delivery address and order amount. Contact us to confirm eligibility, charges and arrangements before purchasing.',
+
+  returns:
+    'Voluntary returns are accepted where a warranty was given at the time of purchase, subject to the agreed terms. Items must be in almost-new condition; customer-damaged or broken items are not accepted under this voluntary policy. Electrical warranties apply only to specific items and must be confirmed at purchase. These conditions do not affect your statutory rights. If an item is faulty, not as described or not fit for purpose, contact us: your legal rights apply regardless of whether a warranty was provided.',
+
+  payments:
+    'All types of payment are accepted in store. Contact the team if you would like to confirm a particular payment method. This website does not process payments.',
 };
+
 const faqs = [
- ['What is Noha & Hannah?', 'Noha & Hannah is a home and living brand by ZWAN ENTERPRISE LIMITED, built around affordable modern luxury: thoughtful details, warm spaces and everyday value.'],
- ['How can I shop?', 'Visit us at 221 Harehills Lane, Leeds, LS8 3QH to shop in store. Contact us for prices and current availability. This website offers inspiration and enquiries; it does not have an online checkout.'],
- ['What are your opening hours?', brand.hours],
- ['Can you arrange delivery?', policies.delivery],
- ['What are the returns and warranty terms?', policies.returns],
- ['Which payment methods do you accept?', policies.payments],
+  [
+    'What is Noha & Hannah?',
+    'Noha & Hannah is a homeware and home living shop by ZWAN ENTERPRISE LIMITED at 221A Harehills Lane, Harehills, Leeds, LS8 3QH. Visit us seven days a week to explore our range and ask our team about current availability. Delivery can be arranged for selected items, depending on your address and order amount.',
+  ],
+  [
+    'How can I shop?',
+    'Visit us at 221A Harehills Lane, Leeds, LS8 3QH to shop in store. Contact us for prices and current availability. This website offers inspiration and enquiries; it does not have an online checkout.',
+  ],
+  ['What are your opening hours?', brand.hours],
+  ['Can you arrange delivery?', policies.delivery],
+  ['What are the returns and warranty terms?', policies.returns],
+  ['Which payment methods do you accept?', policies.payments],
 ];
+
 
 const knowledge = `You are the Noha & Hannah home assistant. Be warm, clear, concise and welcoming. Answer in the customer's language. Focus on home styling and this brand.
 VERIFIED BRAND INFORMATION:

@@ -7,7 +7,7 @@ export const brand = {
   email: 'supports@nohannah.co.uk',
   phone: '01133183217',
   mobile: '07466353588',
-  address: '221 Harehills Lane, Leeds, LS8 3QH',
+  address: '221A Harehills Lane, Leeds, LS8 3QH',
   company: 'ZWAN ENTERPRISE LIMITED',
   hours:
     'Monday to Saturday: 10 AM–8 PM. Sunday: 10 AM–7 PM (UK local time).',
@@ -57,11 +57,11 @@ export const policies = {
 export const faqs = [
   [
     'What is Noha & Hannah?',
-    'Noha & Hannah is a homeware and home living shop by ZWAN ENTERPRISE LIMITED at 221 Harehills Lane, Harehills, Leeds, LS8 3QH. Visit us seven days a week to explore our range and ask our team about current availability. Delivery can be arranged for selected items, depending on your address and order amount.',
+    'Noha & Hannah is a homeware and home living shop by ZWAN ENTERPRISE LIMITED at 221A Harehills Lane, Harehills, Leeds, LS8 3QH. Visit us seven days a week to explore our range and ask our team about current availability. Delivery can be arranged for selected items, depending on your address and order amount.',
   ],
   [
     'How can I shop?',
-    'Visit us at 221 Harehills Lane, Leeds, LS8 3QH to shop in store. Contact us for prices and current availability. This website offers inspiration and enquiries; it does not have an online checkout.',
+    'Visit us at 221A Harehills Lane, Leeds, LS8 3QH to shop in store. Contact us for prices and current availability. This website offers inspiration and enquiries; it does not have an online checkout.',
   ],
   ['What are your opening hours?', brand.hours],
   ['Can you arrange delivery?', policies.delivery],
