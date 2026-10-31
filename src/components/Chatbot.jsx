@@ -4,7 +4,7 @@ import {brand,localReply} from '../content';
 import {makeConversation} from '../chat-protocol';
 const api=import.meta.env.VITE_CHAT_API_URL?.trim();
 const welcome={role:'assistant',text:'Welcome to Noha & Hannah. Ask about our homeware, opening hours, delivery or visiting us in Leeds.'};
-const suggestions=[['Opening hours','What are your opening hours?'],['Delivery','Can you arrange delivery?'],['Our range','What do you sell?']];
+const suggestions=[['Opening Hours','What are your opening hours?'],['Delivery','Can you arrange delivery?'],['Our Range','What do you sell?']];
 export default function Chat({open,setOpen}){
  const [messages,setMessages]=useState([welcome]),[input,setInput]=useState(''),[busy,setBusy]=useState(false),[status,setStatus]=useState(''),[consent,setConsent]=useState(false);
  const field=useRef(null),launcher=useRef(null),closer=useRef(null),log=useRef(null),consentField=useRef(null),abort=useRef(null),inFlight=useRef(false);
@@ -36,12 +36,12 @@ export default function Chat({open,setOpen}){
   }finally{clearTimeout(timer);abort.current=null;inFlight.current=false;setBusy(false)}
  }
  return <>{open&&<section id="store-chat" className="chat-panel" aria-labelledby="chat-title" onKeyDown={e=>{if(e.key==='Escape')close()}}>
-  <div className="chat-head"><span className="assistant-icon"><MessageCircle size={22}/></span><div><strong id="chat-title">Your home assistant</strong><small>{api?'AI-powered · Noha & Hannah':'Brand guide · Noha & Hannah'}</small></div><button ref={closer} className="icon" aria-label="Close chat" onClick={close}><X size={20}/></button></div>
+  <div className="chat-head"><span className="assistant-icon"><MessageCircle size={22}/></span><div><strong id="chat-title">Your Home Assistant</strong><small>{api?'AI-Powered · Noha & Hannah':'Brand Guide · Noha & Hannah'}</small></div><button ref={closer} className="icon" aria-label="Close chat" onClick={close}><X size={20}/></button></div>
   <div ref={log} className="chat-messages" role="log" aria-live="polite" aria-relevant="additions" aria-label="Conversation">{messages.map((m,i)=><div key={i} dir="auto" className={'message '+m.role}>{m.text}</div>)}</div>
   <div className="suggestions">{suggestions.map(([label,q])=><button key={label} disabled={busy} onClick={()=>{setInput(q);setStatus('');field.current?.focus()}}>{label}<ArrowUpRight size={13}/></button>)}</div>
   <p className="chat-note">{api?'AI answers can be mistaken. Confirm prices, availability and arrangements with our team.':'AI is not connected yet. Answers use published brand information.'} Please don’t share payment details or other sensitive information.</p>
   {api&&<label className="chat-consent"><input ref={consentField} type="checkbox" checked={consent} disabled={busy} onChange={e=>{setConsent(e.target.checked);setStatus('')}}/><span>I agree to send my messages and recent conversation to Google Gemini to receive replies.</span></label>}
   <form className="chat-form" onSubmit={send}><label className="sr-only" htmlFor="chat-input">Your question</label><input ref={field} id="chat-input" dir="auto" maxLength={2000} value={input} onChange={e=>setInput(e.target.value)} placeholder="How can we help?" autoComplete="off" disabled={busy} required/><button aria-label={busy?'Sending message':'Send message'} disabled={busy||!input.trim()}><Send size={18}/></button></form>
-  <p className="chat-status" role="status" aria-live="polite">{status}</p><div className="chat-actions"><a href={'tel:'+brand.mobile}>Call the store</a><a href={'https://wa.me/'+brand.mobile.replace(/\D/g,'')} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a><button disabled={busy} onClick={clear}>Clear chat</button></div>
- </section>}<button ref={launcher} className="chat-launcher" aria-expanded={open} aria-controls="store-chat" aria-label={open?'Close home assistant':'Open home assistant'} onClick={()=>open?close():setOpen(true)}>{open?<X size={21}/>:<MessageCircle size={21}/>}<span>{open?'Close':'A little help?'}</span></button></>;
+  <p className="chat-status" role="status" aria-live="polite">{status}</p><div className="chat-actions"><a href={'tel:'+brand.mobile}>Call the Store</a><a href={'https://wa.me/'+brand.mobile.replace(/\D/g,'')} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a><button disabled={busy} onClick={clear}>Clear Chat</button></div>
+ </section>}<button ref={launcher} className="chat-launcher" aria-expanded={open} aria-controls="store-chat" aria-label={open?'Close home assistant':'Open home assistant'} onClick={()=>open?close():setOpen(true)}>{open?<X size={21}/>:<MessageCircle size={21}/>}<span>{open?'Close':'A Little Help?'}</span></button></>;
 }

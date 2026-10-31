@@ -3,7 +3,7 @@
 export const brand = {
   name: 'NOHA & HANNAH',
   domain: 'https://nohannah.co.uk',
-  promise: 'Beautiful homes. Everyday prices.',
+  promise: 'Beautiful Homes. Everyday Prices.',
   email: 'supports@nohannah.co.uk',
   mobile: '+447466796699',
   address: '221A Harehills Lane, Leeds, LS8 3QH',
@@ -15,8 +15,8 @@ export const brand = {
 export const collections = [
   {
     id: 'living',
-    name: 'Living, beautifully',
-    label: 'Living room',
+    name: 'Living, Beautifully',
+    label: 'Living Room',
     image: 'living',
     note: 'A little more warmth. A little more you.',
     text:
@@ -24,7 +24,7 @@ export const collections = [
   },
   {
     id: 'bedroom',
-    name: 'Your softer sanctuary',
+    name: 'Your Softer Sanctuary',
     label: 'Bedroom',
     image: 'bedroom',
     note: 'Make room for slower mornings.',
@@ -33,8 +33,8 @@ export const collections = [
   },
   {
     id: 'details',
-    name: 'The finishing touches',
-    label: 'Everyday details',
+    name: 'The Finishing Touches',
+    label: 'Everyday Details',
     image: 'details',
     note: 'Small changes. A lovely difference.',
     text:
@@ -55,17 +55,17 @@ export const policies = {
 
 export const faqs = [
   [
-    'What is Noha & Hannah?',
+    'What Is Noha & Hannah?',
     'Noha & Hannah is a homeware and home living shop by ZWAN ENTERPRISE LIMITED at 221A Harehills Lane, Harehills, Leeds, LS8 3QH. Visit us seven days a week to explore our range and ask our team about current availability. Delivery can be arranged for selected items, depending on your address and order amount.',
   ],
   [
-    'How can I shop?',
+    'How Can I Shop?',
     'Visit us at 221A Harehills Lane, Leeds, LS8 3QH to shop in store. Contact us for prices and current availability. This website offers inspiration and enquiries; it does not have an online checkout.',
   ],
-  ['What are your opening hours?', brand.hours],
-  ['Can you arrange delivery?', policies.delivery],
-  ['What are the returns and warranty terms?', policies.returns],
-  ['Which payment methods do you accept?', policies.payments],
+  ['What Are Your Opening Hours?', brand.hours],
+  ['Can You Arrange Delivery?', policies.delivery],
+  ['What Are the Returns and Warranty Terms?', policies.returns],
+  ['Which Payment Methods Do You Accept?', policies.payments],
 ];
 
 export function localReply(message) {
