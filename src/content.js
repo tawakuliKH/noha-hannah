@@ -4,7 +4,7 @@ export const brand = {
   name: 'NOHA & HANNAH',
   domain: 'https://nohannah.co.uk',
   promise: 'Beautiful Homes. Everyday Prices.',
-  email: 'supports@nohannah.co.uk',
+  email: 'support@nohannah.co.uk',
   mobile: '+447466796699',
   address: '221A Harehills Lane, Leeds, LS8 3QH',
   company: 'ZWAN ENTERPRISE LIMITED',
