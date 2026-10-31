@@ -5,8 +5,7 @@ export const brand = {
   domain: 'https://nohannah.co.uk',
   promise: 'Beautiful homes. Everyday prices.',
   email: 'supports@nohannah.co.uk',
-  phone: '01133183217',
-  mobile: '07466353588',
+  mobile: '+447466796699',
   address: '221A Harehills Lane, Leeds, LS8 3QH',
   company: 'ZWAN ENTERPRISE LIMITED',
   hours:
@@ -73,7 +72,7 @@ export function localReply(message) {
   const q = message.toLowerCase();
 
   const contact =
-    `Email ${brand.email}, call ${brand.phone} or ${brand.mobile}.`;
+    `Email ${brand.email}, call or WhatsApp ${brand.mobile}.`;
 
   const replies = [];
 
