@@ -55,19 +55,18 @@ export const policies = {
 
 export const faqs = [
   [
-    'What Is Noha & Hannah?',
+    'What is Noha & Hannah?',
     'Noha & Hannah is a homeware and home living shop by ZWAN ENTERPRISE LIMITED at 221A Harehills Lane, Harehills, Leeds, LS8 3QH. Visit us seven days a week to explore our range and ask our team about current availability. Delivery can be arranged for selected items, depending on your address and order amount.',
   ],
   [
-    'How Can I Shop?',
+    'How can I shop?',
     'Visit us at 221A Harehills Lane, Leeds, LS8 3QH to shop in store. Contact us for prices and current availability. This website offers inspiration and enquiries; it does not have an online checkout.',
   ],
-  ['What Are Your Opening Hours?', brand.hours],
-  ['Can You Arrange Delivery?', policies.delivery],
-  ['What Are the Returns and Warranty Terms?', policies.returns],
-  ['Which Payment Methods Do You Accept?', policies.payments],
+  ['What are your opening hours?', brand.hours],
+  ['Can you arrange delivery?', policies.delivery],
+  ['What are the returns and warranty terms?', policies.returns],
+  ['Which payment methods do you accept?', policies.payments],
 ];
-
 export function localReply(message) {
   const q = message.toLowerCase();
 
